@@ -4,6 +4,7 @@ const sqlite3 = require("sqlite3").verbose();
 
 const app = express();
 
+// dummy blog data
 let blogs = [
 	{
 		id: "1",
@@ -28,6 +29,8 @@ let blogs = [
 	},
 ];
 
+// open db (sqlite)
+
 const db = new sqlite3.Database("db.sqlite", (err) => {
 	if (err) {
 		// Cannot open database
@@ -38,6 +41,7 @@ const db = new sqlite3.Database("db.sqlite", (err) => {
 	}
 });
 
+// add to db
 db.run(
 	`CREATE TABLE blog (id INTEGER PRIMARY KEY AUTOINCREMENT, title text,avatar text,intro text)`,
 	(err) => {
@@ -58,6 +62,7 @@ db.run(
 	}
 );
 
+
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function (req, res) {
@@ -73,4 +78,25 @@ app.get("/blogs", async (req, res) => {
 	});
 });
 
-app.listen(8000, () => console.log("Server is running on Port 8000"));
+// // Root endpoint
+// app.get("/", (req, res, next) => {
+// 	res.json({ "message": "Ok" })
+// });
+
+// Insert here other API endpoints
+
+// Default response for any other request
+app.use(function (req, res) {
+	res.status(404);
+});
+
+
+// Server port
+var HTTP_PORT = 8000
+// Start server
+app.listen(HTTP_PORT, () => {
+	console.log(`Server running http://localhost:${HTTP_PORT} on port ${HTTP_PORT}`);
+});
+
+
+// app.listen(8000, () => console.log("Server is running on Port 8000"));

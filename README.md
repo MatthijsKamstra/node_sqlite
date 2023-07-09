@@ -12,9 +12,13 @@ brew install --cask db-browser-for-sqlite
 ## server
 
 ```bash
+# init node project
 npm init -y
+# install packages
 npm install express
 npm install sqlite3
+# just te be sure: ignore the node_modules folder
+echo node_modules > .gitignore
 ```
 
 ```bash
@@ -44,6 +48,7 @@ app.listen(8000, () => console.log("Server is running on Port 8000"));
 ## Resource
 
 - https://arctype.com/blog/pwa-sqlite/
+- https://github.com/Claradev32/Offline-first-App/
 - https://developerhowto.com/2018/12/29/build-a-rest-api-with-node-js-and-express-js/
 - https://codewithwolf.com/how-to-use-jwt-with-node-express-sqlite-and-typescript
 
