@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node server00.js",
+    "server-0": "node server00.js",
+    "server-1": "node server01.js",
+    "server-2": "node server02.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "md5": "^2.3.0",
     "sqlite3": "^5.1.6"
   }
 }

@@ -48,9 +48,13 @@ app.listen(8000, () => console.log("Server is running on Port 8000"));
 ## Resource
 
 - https://arctype.com/blog/pwa-sqlite/
-- https://github.com/Claradev32/Offline-first-App/
+  - https://github.com/Claradev32/Offline-first-App/
 - https://developerhowto.com/2018/12/29/build-a-rest-api-with-node-js-and-express-js/
+  - https://github.com/fraigo/node-express-rest-api-example
 - https://codewithwolf.com/how-to-use-jwt-with-node-express-sqlite-and-typescript
+  - https://github.com/mwolfhoffman/node-jwt-sqlite-typescript-starter
+- https://giuliohome.wordpress.com/2021/04/10/node-js-express-sqlite-for-angular-rest-api/
+- https://geshan.com.np/blog/2021/10/nodejs-sqlite/
 
 orm
 
