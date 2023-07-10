@@ -45,6 +45,10 @@ app.get("/", function (req, res) {
 app.listen(8000, () => console.log("Server is running on Port 8000"));
 ```
 
+## ORM
+
+- https://www.prisma.io/docs/getting-started/quickstart
+
 ## Resource
 
 - https://arctype.com/blog/pwa-sqlite/
